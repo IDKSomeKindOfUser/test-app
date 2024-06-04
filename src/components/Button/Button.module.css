@@ -1,0 +1,22 @@
+.button{
+    padding: 10px 16px;
+
+    color: var(--color-text);
+    background-color: var(--color-accent);
+
+    border-radius: var(--border-radius-button);
+
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+
+    transition-duration: var(--transition-duration);
+}
+
+.button:hover{
+    background-color: #293C62FF;
+}
+
+@media (min-width: 768px){
+    display: none;
+}

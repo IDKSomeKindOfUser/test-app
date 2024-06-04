@@ -3,31 +3,45 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+    --max-width: 1494px;
+    --border-radius-content: 12px;
+    --border-radius-button: 4px;
+
+    --font: 'Poppins', sans-serif;
+
+    --color-primary: #141414;
+    --color-text: #E1E3E6;
+    --color-text-secondary: #B0B1B6;
+    --color-accent: #0047BB;
+    --color-success: #2E7D32;
+    --color-error: #D32F2F;
+
+    --transition-duration: 0.2s;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
+html,
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+    overflow-x: hidden;
+
+    max-width: var(--max-width);
+    margin-inline: auto;
+
+    color: var(--color-text);
+    background-color: var(--color-primary);
+
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+a {
+    text-decoration: none;
+
+    color: inherit;
 }
